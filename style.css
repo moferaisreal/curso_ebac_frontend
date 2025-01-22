@@ -58,6 +58,8 @@ section {
 
 section h2, .artigos article {
     margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 footer {
@@ -100,8 +102,7 @@ footer {
 }
 
 .artigos article h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 10px;
 }
 
 .artigos article a {
@@ -177,7 +178,6 @@ footer {
     color: rgb(212, 175, 55);
 }
 
-/* Backgrounds das categorias */
 #sports {
     background-color: rgb(40, 25, 15);
 }
