@@ -1,0 +1,399 @@
+/* Estilos gerais */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Geo", serif;
+}
+
+header, section h2, section h3, form button {
+    font-family: "Audiowide", serif;
+    font-weight: normal;
+}
+
+/* Estilos de contêiner */
+
+.header, .container, .titles, .contactform, .socialmedia, .navbar, #footer {
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.socialmedia {
+
+}
+
+.socialmedia img {
+    max-width: 3vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #5d16a0;
+    color: #f5dd54;
+    font-size: clamp(2rem, 2.5vw , 5rem);
+    text-align: center;
+}
+
+#navbar {
+    position: sticky;
+    top: 0; 
+    overflow: hidden;
+}
+
+ul.navbar  {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #5d16a0;
+}
+
+ul.navbar li{
+    float: left;
+}
+
+ul.navbar li a{
+    display: block;
+    color: #f5dd54;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+ul.navbar li.topo {
+    float: right;
+}
+
+.container {
+    display: flex;
+    margin: 0 auto; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    padding: 1vh 1vw;
+}
+
+#about div.container {
+    flex-wrap: nowrap;
+}
+
+footer {
+    background-color: #5d16a0;
+    color: #f5dd54;
+    font-size: larger;
+    padding: 10px auto ;
+    margin-top: auto;
+    text-align: center;
+}   
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contactform {
+    width: 40%;
+    float: left;
+    margin-bottom: 8px;
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.socialmedia{
+    float: right;
+}
+
+.divright{
+    float: left;
+    padding-left: 1vw;
+    width: 70%;
+    margin-right: 1vh;
+}
+
+.divleft{
+    width: 30%;
+    flex-wrap: wrap;
+    float: left;
+    padding-left: 1vw;
+    display: flex;
+}
+
+.subtitlesl{
+    float: left;
+}
+
+.subtitlesr{
+    float: right;
+}
+
+.subtitlesl,.contactform {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.subtitlesr,.socialmedia {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.contactform input,
+.contactform textarea,
+.contactform button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+/* Estilo dos ícones */
+
+#upper_icons img, #lower_icons img{
+    height: clamp(50px, 20vh, 100px); 
+    width: fit-content ;
+}
+
+/* Estilos diversos */
+
+ul.navbar li a:hover{
+    color: #f5dd54;
+    text-decoration: underline;
+    background-color:#9a8faa
+}
+
+ul.navbar li a:visited{
+    color: #c2a501;
+    text-decoration: none;
+}
+
+.titles{
+    flex: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+form button {
+    background-color: #7a28c5 ;
+    color: #f5dd54;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #9a8faa;
+}
+
+input:focus, textarea:focus {
+    outline-color: #8a4d9f;
+}
+
+/* Background para seções */
+
+#about, #sports, #forfun, #passion, #contact {
+    background-size: cover;
+    background-position: center;
+}
+#about, #sports, #forfun, #passion {
+    border-bottom: 3px solid #8a4d9f;
+}
+
+#about{
+    background-image: url(./images/bground_1.jpg);
+}
+
+#sports {
+    background-image: url(./images/bgound_sports.jpg);
+}
+
+#forfun {
+    background-image: url(./images/bground_fun01.jpg);
+}
+
+#passion {
+    background-image: url(./images/bgound_passion.jpg);
+}
+
+#contact {
+    background-image: url(./images/bground_contact.jpg);
+}
+
+/* Estilos de Texto */
+
+h2 {
+    font-size: clamp(2rem, 3vw, 5rem);
+    color: #7a28c5;
+}
+
+h3 {
+    font-size: clamp(1.5rem, 2vw, 4rem);
+    color: #f0e6ff;
+}
+
+p {
+    font-size: clamp(1rem, 1vw, 2rem);
+    line-height: 1.5;
+    color:#f0e6ff;
+}
+
+/* Estilos de imagens */
+
+img {
+    object-fit: fit-content;
+}
+
+/* Responsividade */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body, html, .container {
+        overflow: visible !important;
+    }
+
+    .navbar {
+        position: sticky !important; 
+        top: 0 !important;
+        z-index: 1000;
+        width: 100%;
+        background-color: #5d16a0;
+        display: block;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }   
+
+    .contactform, .socialmedia {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    li.topo, ul.navbar li {
+        float: none;
+    }
+
+    ul.navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    ul.navbar li a {
+        font-size: clamp(14px, 4vw, 20px);
+        padding: 0.3vh 0.3vw;
+    }
+
+    h2 {
+        font-size: clamp(18px, 5vw, 24px);
+    }
+    h3, p {
+        font-size: clamp(14px, 4vw, 20px);
+    }
+
+    img {
+        max-width: 70%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+
+    .container{
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;        
+    }
+
+    .container .divleft,
+    .container .divright {
+        width: 48%; 
+        display: flex;
+        flex-direction: column;
+        float: none;
+    }
+    
+    div #sportsdiv.container, div #forfundiv.container ,div #passion .container {
+        flex-wrap: wrap;
+        flex-direction: column;       
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #about div.container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        align-content: center;
+    }
+
+    .container .divleft,
+    .container .divright {
+        width: 90%; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .socialmedia img {
+        max-width: 6vw; 
+        height: 4vh;
+    }
+
+    .socialmedia {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px; 
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto auto auto auto;
+        place-items: center;
+        text-align: center;
+    }
+
+    .subtitlesr, .subtitlesl {
+        width: 100%;
+        max-width: 80%;
+    }
+
+    .subtitlesr {
+        grid-row: 2;
+    }
+
+    .socialmedia {
+        grid-row: 3; 
+    }
+}
