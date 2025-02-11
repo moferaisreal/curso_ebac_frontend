@@ -1,0 +1,109 @@
+:root{
+/*margins*/
+    --margin-xxs: 0.25rem;
+    --margin-xs: 0.5rem;
+    --margin-s: 0.75rem;
+    --margin-m: 1rem;
+    --margin-l: 1.25rem;
+    --margin-xl: 1.5rem;
+    --margin-xxl: 1.75rem;
+    --margin-xxxl: 2.5rem;
+
+    /*Colors*/
+    --gray10: hsl(0, 0%, 10%);
+    --gray30: hsl(0, 0%, 30%);
+    --gray50: hsl(0, 0%, 50%);
+    --gray70: hsl(0, 0%, 70%);
+    --gray90: hsl(0, 0%, 90%);
+    --color1: hsl(358, 46%, 45%);
+    --color2: hsl(199, 29%, 53%);
+
+    /*Fonts*/
+    --ff: "Geo", serif;
+    --ff1: "Stardos Stencil", serif;
+    --tiny: clamp(0.6068rem, 1.2039rem + -0.7705vw, 1.0113rem) var(--ff);
+    --small: clamp(0.8333rem, 0.8333rem + 0.7705vw, 0.8333rem) var(--ff);
+    --p: clamp(1rem, 1rem + 0.7705vw, 1rem) var(--ff1);
+    --h6: clamp(1.2rem, 1.2rem + 0.7705vw, 1.2rem) var(--ff1);
+    --h5: clamp(1.44rem, 1.44rem + 0.7705vw, 1.44rem) var(--ff1);
+    --h4: clamp(1.728rem, 1.728rem + 0.7705vw, 1.728rem) var(--ff1);
+    --h3: clamp(2.0736rem, 2.0736rem + 0.7705vw, 2.0736rem) var(--ff1);
+    --h2: clamp(2.4883rem, 2.4883rem + 0.7705vw, 2.4883rem) var(--ff1);
+    --h1: clamp(2.986rem, 2.986rem + 0.7705vw, 2.986rem) var(--ff);
+    --big: clamp(3.5832rem, 3.5832rem + 0.7705vw, 3.5832rem) var(--ff);
+}
+
+/*box reset*/
+*,*::before,*::after{
+    box-sizing:border-box;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+/*btns*/
+.btn:hover{
+    scale:1.05;
+    background-color: var(--color1);
+    color: var(--gray90);
+}
+
+.btn{
+    background-color: var(--color2);
+    color: var(--gray10);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 45%;
+    margin: 0 auto;
+}
+
+header {
+    font: var(--h1);
+    width: 100%;
+    text-align: center;
+    background-color: var(--color2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    height: auto;
+}
+
+main {
+    font: var(--h4);
+}    
+
+footer {
+    font: var(--small);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: var(--gray90);
+    background-color: var(--color1);
+    text-align: center;    
+    padding: 10px;
+}
+
+.container {
+    margin: var(--margin-xxxl) auto;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+form {
+    margin-top: var(--margin-xxl);
+}
+
+input, textarea, button {
+    font: var(--h6);
+    padding: 8px;
+    margin-bottom: var(--margin-l);
+    width: 100%;
+    display: block;
+    font: var(--h5);
+}
