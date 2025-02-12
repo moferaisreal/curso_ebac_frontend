@@ -24,11 +24,6 @@ function validarNome() {
     return nomeConvertArray.length >= 2;
 }
 
-formAluno.addEventListener('submit', function(e){
-    e.preventDefault();
-    console.log(`${arrayAlunos.value}+${adicionarNomeAluno.value}`);
-});
-
 formMateria.addEventListener('submit', function(e){
     e.preventDefault();
 
