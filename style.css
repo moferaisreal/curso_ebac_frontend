@@ -1,0 +1,183 @@
+:root{
+    /*margins*/
+    --margin-xxs: 0.25rem;
+    --margin-xs: 0.5rem;
+    --margin-s: 0.75rem;
+    --margin-m: 1rem;
+    --margin-l: 1.25rem;
+    --margin-xl: 1.5rem;
+    --margin-xxl: 1.75rem;
+    --margin-xxxl: 2.5rem;
+    
+    /*Colors*/
+    --preto: hsl(228, 8%, 10%);
+    --escuro: hsl(231, 8%, 30%);
+    --cinza: hsl(228, 10%, 50%);
+    --claro: hsl(180, 16%, 85%);
+    --branco: hsl(180, 14%, 96%);
+    --vermelho: hsl(4, 56%, 43%);
+    --verde: hsl(138, 76%, 31%);
+    --azul: hsl(215, 97%, 62%);
+    
+    /*Fonts*/
+    --ff:  "League Spartan", serif;
+    --ff1:  "Asul", serif;
+    --tiny: clamp(0.5628rem, 0.7208rem + -0.1317vw, 0.6944rem) var(--ff);
+    --small: clamp(0.7502rem, 0.85rem + -0.0831vw, 0.8333rem) var(--ff);
+    --p: clamp(1rem, 1rem + 0.7705vw, 1rem) var(--ff);
+    --h6: clamp(1.2rem, 1.1734rem + 0.133vw, 1.333rem) var(--ff);
+    --h5: clamp(1.44rem, 1.3726rem + 0.3369vw, 1.7769rem) var(--ff);
+    --h4: clamp(1.728rem, 1.5999rem + 0.6406vw, 2.3686rem) var(--ff);
+    --h3: clamp(2.0736rem, 1.8569rem + 1.0837vw, 3.1573rem) var(--ff1);
+    --h2: clamp(2.4883rem, 2.1442rem + 1.7204vw, 4.2087rem) var(--ff1);
+    --h1: clamp(2.986rem, 2.4611rem + 2.6242vw, 5.6102rem) var(--ff1);
+    --big: clamp(3.5832rem, 2.8041rem + 3.8953vw, 7.4784rem) var(--ff1);
+    }
+    
+    /*box reset*/
+    *,*::before,*::after{
+        box-sizing:border-box;
+    }
+    
+    *{
+        margin:0;
+        padding:0;
+        font-size: 16px;
+    }
+    
+    /*btns*/
+    .btn:hover{
+        scale:1.05;
+    }
+    
+    .btn{
+        background-color: var(--verde);
+        color: var(--branco);
+        font: var(--h6);
+        border: none;
+        cursor: pointer;
+        border-radius: 5%;
+        padding: .5vh .5vw;
+    }
+
+    /*tables* zebra*/
+    tr:nth-child(even){
+        background-color: var(--claro);
+    }
+
+    /*tables*/
+    table{
+        width: 100%;
+        text-align: center;
+        background-color: var(--branco);
+    }
+
+    table th{
+        border-bottom: 2px solid var(--cinza);
+        padding: .6em 0;
+        font: var(--h5);
+        font-weight: bold;
+    }
+
+    tfoot th{
+        border-top: 2px solid var(--cinza);
+    }
+
+    table td{
+        color: var(--escuro);
+        font: var(--h6);
+        padding: .5em 0;
+        margin-top: var(--margin-m);
+    }
+
+    table img {
+        height: 3.5em;
+    }
+    /*form*/
+    form input{
+        font: var(--p);
+        color: var(--escuro);
+        border: none;
+        background-color: var(--branco);
+        border-bottom: 2px solid var(--cinza);
+        padding: .2vh .2vw;
+    }
+
+    form{
+        display: flex;
+        max-width: 640px;
+        width: 100%;
+        justify-content: space-between;
+    }
+    /*header*/
+    header  {
+        background-color: var(--claro);
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: var(--margin-xxl);
+    }
+
+    header h1 {
+        font: var(--h1);
+        color: var(--escuro);
+        margin-left: var(--margin-s);
+    }
+
+    header img{
+        max-height: 50px;
+        height: auto;
+        margin: var(--margin-xs);
+    }
+    /*footer*/
+    footer {
+        font: var(--h3);
+        background-color: var(--claro);
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1vh 1vw;
+    }
+
+    body {
+        background-color: var(--cinza);
+    }
+
+    .container {
+        max-width: 960px;
+        width: 100%;
+        margin: 0 auto;
+        padding: var(--margin-l);
+    }
+
+    .container h1 {
+        font: var(--h4);
+        color: var(--escuro);
+        margin-bottom: var(--margin-m);
+        background-color: var(--branco);
+        text-align: center;
+        padding: .2em;
+    }
+
+    @media only screen and (max-width: 425px) {
+        header h1 {
+            font: var(--h4);
+        }
+        .container{
+            font: var(--p);
+        }
+    }
+
+    @media only screen and (max-width: 320px) {
+        input{
+            margin-right: var(--margin-xxs);
+        }
+        select{
+            margin-right: var(--margin-xxs);
+        }
+    }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 02</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./images/logo.png" alt="logo">
+        <h1>Sistema de Notas</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Cálculo de Médias</h1>
+            <form id="formMateria">
+                <input required id="materiaInput" type="text" name="" placeholder="Insira o nome da Matéria">
+                <input required type="number" name="" id="notaInput" placeholder="Nota" step="0.1" min="0" max="10">
+                <button id="addNota" class="btn" type="submit">Adicionar +</button>
+            </form>
+        </div>
+        <div class="container">
+            <table cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Atividade</th>
+                        <th>Nota da Atividade</th>
+                        <th>Situação</th>
+                    </tr>
+                </thead>
+                <tbody>                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Média Final:</th>
+                        <th id="mediaFinal">---</th>
+                        <th id="emojiFinal">---</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>Todos os direitos reservados &copy; 2025</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
