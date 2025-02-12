@@ -70,7 +70,7 @@ function calcularMediaFinal() {
 function updateMedia(){
     const mediaFinalOutput = calcularMediaFinal();
 
-    document.getElementById('mediaFinal').innerHTML = mediaFinalOutput;
+    document.getElementById('mediaFinal').innerHTML = mediaFinalOutput.toFixed(2);
     document.getElementById('emojiFinal').innerHTML = mediaFinalOutput>= 7? imgCheck : imgCross;
 
     console.log(arrayNotas);
