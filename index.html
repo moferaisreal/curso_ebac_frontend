@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agenda de Contatos</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="./images/logo.png" alt="logo da página">
+            <h1>Agenda de Contatos</h1>
+        </header>
+    <main>
+        <div class="formContainer">
+            <form>
+                <input required type="text" name="" id="nomeForm"  placeholder="Nome">
+                <input required type="tel" name="" id="telefoneForm" placeholder="Telefone">
+                <input required type="email" name="" id="emailForm" placeholder="E-mail">
+                <button class="btn" type="submit">Cadastrar</button>
+            </form>
+        </div>
+        <div class="searchContainer">
+            <input id="campoPesquisa" type="text" class="searchBox" placeholder="Pesquisar...">
+            <img id="botaoSearch" src="./images/search.png" alt="Botão" onclick="searchContact()" style="cursor: pointer;">
+        </div>
+        <div class="agenda">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+                <tbody id="contatosTbody">
+                </tbody>
+            </table>
+                <div class="index">
+                    <a href="#A">A</a>
+                    <a href="#B">B</a>
+                    <a href="#C">C</a>
+                    <a href="#D">D</a>
+                    <a href="#E">E</a>
+                    <a href="#F">F</a>
+                    <a href="#G">G</a>
+                    <a href="#H">H</a>
+                    <a href="#I">I</a>
+                    <a href="#J">J</a>
+                    <a href="#K">K</a>
+                    <a href="#L">L</a>
+                    <a href="#M">M</a>
+                    <a href="#N">N</a>
+                    <a href="#O">O</a>
+                    <a href="#P">P</a>
+                    <a href="#Q">Q</a>
+                    <a href="#R">R</a>
+                    <a href="#S">S</a>
+                    <a href="#T">T</a>
+                    <a href="#U">U</a>
+                    <a href="#V">V</a>
+                    <a href="#W">W</a>
+                    <a href="#X">X</a>
+                    <a href="#Y">Y</a>
+                    <a href="#Z">Z</a>
+                    <a href="#1">#</a>
+                </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Agenda de Contatos. Todos os direitos reservados.</p>
+    </footer>  
+    <script src="script.js"></script>  
+</body>
+</html>
