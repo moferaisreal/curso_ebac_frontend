@@ -80,7 +80,7 @@ document.querySelector('form').addEventListener('submit', function(e) {
     document.getElementById('emailForm').value = '';
 
     organizarContatos();
-    indexarContatos(); // Re-index after sorting
+    indexarContatos(); 
 });
 
 // Busca
