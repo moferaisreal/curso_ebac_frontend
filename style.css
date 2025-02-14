@@ -10,18 +10,16 @@
     --margin-xxxl: 2.5rem;
     
     /*Colors*/
-    --preto: hsl(228, 8%, 10%);
-    --escuro: hsl(231, 8%, 30%);
-    --cinza: hsl(228, 10%, 50%);
-    --claro: hsl(180, 16%, 85%);
-    --branco: hsl(180, 14%, 96%);
-    --vermelho: hsl(4, 56%, 43%);
-    --verde: hsl(138, 76%, 31%);
-    --azul: hsl(215, 97%, 62%);
+    --preto:hsl(204, 61%, 8%);
+    --escuro: hsl(204, 61%, 15%);
+    --claro: hsl(204, 61%, 50%);
+    --branco: hsl(204, 61%, 95%);
+    --corlinhas: hsl(204, 61%, 25%);
+    --corfundo: hsl(60, 56%, 91%);
     
     /*Fonts*/
-    --ff:  "League Spartan", serif;
-    --ff1:  "Asul", serif;
+    --ff: "Libre Caslon Display", serif;
+    --ff1: "Cinzel", serif;
     --tiny: clamp(0.5628rem, 0.7208rem + -0.1317vw, 0.6944rem) var(--ff);
     --small: clamp(0.7502rem, 0.85rem + -0.0831vw, 0.8333rem) var(--ff);
     --p: clamp(1rem, 1rem + 0.7705vw, 1rem) var(--ff);
@@ -45,139 +43,262 @@
         font-size: 16px;
     }
     
-    /*btns*/
-    .btn:hover{
-        scale:1.05;
+    html {
+        background-image: url('images/bg.jpg');
+        background-size: cover;
+    }
+
+    /*header*/
+    
+    header{
+        background-color: var(--preto);
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
     }
     
-    .btn{
-        background-color: var(--verde);
+    header h1 {
         color: var(--branco);
-        font: var(--h6);
-        border: none;
-        cursor: pointer;
-        border-radius: 5%;
-        padding: .5vh .5vw;
+        font: var(--h1);
+        font-weight: bold;;
+    }
+    
+    header img {
+        height: 9vh;
+        margin: var(--margin-m);
     }
 
-    /*tables* zebra*/
-    tr:nth-child(even){
-        background-color: var(--claro);
-    }
+    /*containers*/
 
-    /*tables*/
-    table{
+    .formContainer, .searchContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .formContainer {
+        margin: var(--margin-xl) 0;
         width: 100%;
-        text-align: center;
-        background-color: var(--branco);
+    }
+    
+    .searchContainer img {
+        height: 4vh;
+        margin: 0 var(--margin-xxs);
     }
 
-    table th{
-        border-bottom: 2px solid var(--cinza);
-        padding: .6em 0;
+    .searchContainer img:hover {
+        scale: 1.05;
+    }
+    
+    .agenda{
+        display: flex;
+        margin: .2em 20em;
+        position: relative;
+    }
+
+    /*tabela*/
+
+    .table{
+        border: 5px solid var(--corlinhas);
+        width: 100%;
+        margin: var(--margin-s) auto;
+        border-collapse: collapse;
+        border-right: .2em solid var(--corlinhas);
+
+    }
+
+    thead{
+        background-color: var(--corfundo);
+        font: var(--h5);
+        border-bottom: .2em solid var(--corlinhas);
+    }
+
+    thead th {
+        padding: 10px;
+        text-align: left;
+        border-right: .2em solid var(--corlinhas);
         font: var(--h5);
         font-weight: bold;
     }
 
-    tfoot th{
-        border-top: 2px solid var(--cinza);
+    tbody{
+        text-align: left;
+        background-color: var(--corfundo);
     }
 
-    table td{
+    td {
         color: var(--escuro);
         font: var(--h6);
-        padding: .5em 0;
-        margin-top: var(--margin-m);
+        font-weight: 400;
+        height: auto;
+        padding: 8px;
+        border-bottom: .1em solid var(--corlinhas);
+        max-width: 300px; 
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
     }
 
-    table img {
-        height: 3.5em;
-    }
-    /*form*/
-    form input{
-        font: var(--p);
-        color: var(--escuro);
-        border: none;
-        background-color: var(--branco);
-        border-bottom: 2px solid var(--cinza);
-        padding: .2vh .2vw;
-    }
-
-    form{
+    /*index*/
+    
+    .index{
         display: flex;
-        max-width: 640px;
-        width: 100%;
-        justify-content: space-between;
-    }
-    /*header*/
-    header  {
-        background-color: var(--claro);
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        display: flex;
+        flex-direction: column;
+        margin: var(--margin-s) auto;
+        margin-left: 0;
+        border-top: 5px solid var(--corlinhas);
+        border-right: 5px solid var(--corlinhas);
+        border-bottom: 5px solid var(--corlinhas);
+        background-color: var(--corfundo);
         align-items: center;
-        margin-bottom: var(--margin-xxl);
+    }
+
+    .index a{
+        color: var(--corlinhas);
+        font: var(--p);
+        font-weight: 300;
+        text-decoration: none;
+    }
+
+    .index a:hover{
+        cursor: pointer;
+        scale: 1.1;
+        font: var(--h5);
+        text-decoration: underline;
+    }
+
+    /*input*/
+
+    input {
+        color: var(--branco);
+        font: var(--h6);
+        font-weight: 600;
+        background-color: var(--escuro);
+    }
+
+    ::placeholder {
+        color: var(--branco);
+        font: var(--h6);
+        font-weight: 500;
+        padding-left: .2vw;
+    }
+
+    .searchBox {
+        width: 30%;
+    }
+
+
+    /*footer*/
+
+    footer{
+        width: 100%;
+        background-color: var(--escuro);
+        bottom: 0;
+        text-align: center;
+        left: 0;
+        position: fixed;
+        color: var(--branco);
+        padding: .2em;
+    }
+    
+    /*btns*/
+
+    .btn{
+        color: var(--branco);
+        background-color: var(--escuro);
+        border: none;
+        padding: .1em .1em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 10%;
+        font: var(--h6);
+        font-weight: 500;
+    }
+    .btn:hover{
+        scale:1.05;
+        font-weight: 600;
+        background-color: var(--escuro);
+    }
+    
+
+
+/* Media Query para Tablets */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+
+    .agenda {
+        margin: .2em 5em; 
+    }
+
+    header img {
+        height: 7vh; 
+    }
+
+    .formContainer, .searchContainer {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .formContainer {
+        margin: var(--margin-m) 0; /* Ajustando margem */
+    }
+
+    .searchContainer img {
+        margin: var(--margin-xs) 0 0 0; 
+    }
+
+    .table {
+        font-size: var(--small); 
+    }
+
+    .index {
+        margin: var(--margin-s) 0;
+    }
+
+    .index a {
+        margin: var(--margin-xxs); 
+    }
+}
+
+/* Media Query para Dispositivos Móveis */
+@media screen and (max-width: 767px) {
+    .agenda {
+        margin: .2em 1em; 
+    }
+
+    header img {
+        height: 6vh;
+        margin: var(--margin-s) 0; 
     }
 
     header h1 {
-        font: var(--h1);
-        color: var(--escuro);
-        margin-left: var(--margin-s);
+        font-size: var(--h3); 
     }
 
-    header img{
-        max-height: 50px;
-        height: auto;
-        margin: var(--margin-xs);
-    }
-    /*footer*/
-    footer {
-        font: var(--h3);
-        background-color: var(--claro);
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        padding: 1vh 1vw;
+    .formContainer{
+        flex-direction: column; 
     }
 
-    body {
-        background-color: var(--cinza);
+    .formContainer {
+        margin: var(--margin-s) 0; 
     }
 
-    .container {
-        max-width: 960px;
-        width: 100%;
-        margin: 0 auto;
-        padding: var(--margin-l);
+    .searchContainer img {
+        margin: var(--margin-xxs) 0 0 0; 
     }
 
-    .container h1 {
-        font: var(--h4);
-        color: var(--escuro);
-        margin-bottom: var(--margin-m);
-        background-color: var(--branco);
-        text-align: center;
-        padding: .2em;
+    .table {
+        font-size: var(--tiny); 
     }
 
-    @media only screen and (max-width: 425px) {
-        header h1 {
-            font: var(--h4);
-        }
-        .container{
-            font: var(--p);
-        }
+    .index a {
+        margin: var(--margin-xxs); 
+        font-size: var(--tiny); 
     }
-
-    @media only screen and (max-width: 320px) {
-        input{
-            margin-right: var(--margin-xxs);
-        }
-        select{
-            margin-right: var(--margin-xxs);
-        }
+    
+    input, .searchBox {
+        width: 100%; 
+        max-width: 300px;
     }
+}
